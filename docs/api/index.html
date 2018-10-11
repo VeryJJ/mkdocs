@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        <meta name="author" content="黄老师">
+        
+        <link rel="shortcut icon" href="../img/favicon_rocket.ico">
+        
+        <title>政采云-共享业务</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/Atom One Light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82463489-2', 'mkdocs.org');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">政采云-共享业务</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">首页</a>
+                            </li>
+                            <li >
+                                <a href="../map/">能力地图</a>
+                            </li>
+                            <li >
+                                <a href="../solution/">解决方案</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">API文档</a>
+                            </li>
+                            <li >
+                                <a href="../about/">帮助支持</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../solution/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../about/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">【共享业务】</a></li>
+            <li><a href="#_2">采购计划</a></li>
+            <li><a href="#_3">履约管理</a></li>
+            <li><a href="#_8">结算管理</a></li>
+            <li><a href="#_9">在线支付</a></li>
+            <li><a href="#_10">保证金</a></li>
+            <li><a href="#_13">商品库</a></li>
+            <li><a href="#_18">预警监控</a></li>
+            <li><a href="#_19">诚信管理</a></li>
+            <li><a href="#_20">订阅平台</a></li>
+        <li class="main "><a href="#_21">【基础服务】</a></li>
+            <li><a href="#_22">用户信息</a></li>
+            <li><a href="#_26">机构组织</a></li>
+            <li><a href="#_30">租户区划</a></li>
+            <li><a href="#_31">菜单权限</a></li>
+            <li><a href="#_32">数据权限</a></li>
+            <li><a href="#_33">采购目录</a></li>
+        <li class="main "><a href="#_34">【交易角色】</a></li>
+            <li><a href="#_35">供应商库</a></li>
+            <li><a href="#_36">代理机构库</a></li>
+            <li><a href="#_37">专家库</a></li>
+            <li><a href="#_38">资质库</a></li>
+        <li class="main "><a href="#_39">【数据服务】</a></li>
+            <li><a href="#_40">元数据中心</a></li>
+            <li><a href="#_43">自然语言处理</a></li>
+            <li><a href="#_46">归档备案中心</a></li>
+        <li class="main "><a href="#_47">【组件服务】</a></li>
+            <li><a href="#_48">工作流</a></li>
+            <li><a href="#_49">模板中心</a></li>
+            <li><a href="#_50">公告</a></li>
+            <li><a href="#_51">待办/消息</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">【共享业务】</h1>
+<hr />
+<h2 id="_2">采购计划</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查询经办人可用采购计划</td>
+<td><a href="">availPPlanRead</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购计划关联使用</td>
+<td><a href="">relationAdd</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购计划（整体）取消关联</td>
+<td><a href="">relationDel</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购计划（单个）取消关联</td>
+<td><a href="">relationPlanDel</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购计划(整体替换)更新关联</td>
+<td><a href="">relationUpdate</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购计划（单个）更新关联</td>
+<td><a href="">relationPlanUpdate</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购计划关联使用转移</td>
+<td><a href="">replaceRelation</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购计划金额/数量结算</td>
+<td><a href="">settlement</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_3">履约管理</h2>
+<h3 id="_4">发货单</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建发货单</td>
+<td><a href="">saveDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（批量）创建发货单</td>
+<td><a href="">batchSaveDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（退换货）创建发货单</td>
+<td><a href="">saveExchangeDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新发货单</td>
+<td><a href="">updateDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>提交采购单位确认</td>
+<td><a href="">submit</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>采购单位确认</td>
+<td><a href="">confirm</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>供应商发货</td>
+<td><a href="">deliver</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>供应商撤回发货</td>
+<td><a href="">recallDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>作废发货单</td>
+<td><a href="">cancelDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询发货单</td>
+<td><a href="">pagingDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取发货单详情</td>
+<td><a href="">getDeliveryDetailBy</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取发货单概要</td>
+<td><a href="">getDeliveryBriefBy</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取商品行列表</td>
+<td><a href="">listItemsBy</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取商品行详情</td>
+<td><a href="">getItemDetailBy</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">验收单</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分页查询发货单</td>
+<td><a href="">pagingCheckSignManagerDelivery</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取验收单创建信息</td>
+<td><a href="">getCheckSingSheetInitInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>按验收单签收</td>
+<td><a href="">saveCheckSignSheetAgree</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>按合同签收</td>
+<td><a href="">saveCheckSignSheetAgreeByContract</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取收货类型&amp;收货方式配置</td>
+<td><a href="">listCheckSignType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询验收明细</td>
+<td><a href="">queryCheckSignReturnInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询验收单</td>
+<td><a href="">pagingCheckSignSheet</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取验收单详情</td>
+<td><a href="">getCheckSignSheetDetail</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">发票</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建发票</td>
+<td><a href="">save</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>提交发票</td>
+<td><a href="">submit</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新发票</td>
+<td><a href="">update</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>退回发票</td>
+<td><a href="">back</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询发票</td>
+<td><a href="">pagingInvoiceAr</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>列表查询发票</td>
+<td><a href="">listInvoiceAr</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取发票详情</td>
+<td><a href="">getInvoiceArById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询发票详情（含退回明细）</td>
+<td><a href="">listInvoiceArAndCheckHistory</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">退换货</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建退换货单</td>
+<td><a href="">save</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>提交退换货单</td>
+<td><a href="">submit</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新退换货单</td>
+<td><a href="">update</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>审核退换货单</td>
+<td><a href="">audit</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>处理退换货单</td>
+<td><a href="">confirm</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询退换货单</td>
+<td><a href="">pagingReturnSheet </a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>列表查询退换货单</td>
+<td><a href="">listReturnSheet </a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取退换货单详情</td>
+<td><a href="">getReturnSheetById </a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询退换货详情（含审核明细）</td>
+<td><a href="">listReturnSheetAndCheckHistory </a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取验收单商品明细</td>
+<td><a href="">getCheckSignItemDetail </a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询验收单</td>
+<td><a href="">listCheckSignSheetByReturn </a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_8">结算管理</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建结算单</td>
+<td><a href="">createFs</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新结算单</td>
+<td><a href="">refreshFs</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询结算单明细</td>
+<td><a href="">getFinalStatementDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件统计结算单数量</td>
+<td><a href="">countOrgFinalStatement</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询结算单</td>
+<td><a href="">getBusinessRelatedFinalStatements</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_9">在线支付</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>请求在线支付页面地址</td>
+<td><a href="">tradePreCreate</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>取消支付</td>
+<td><a href="">tradeCancel</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>退款</td>
+<td><a href="">tradeRefund</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>MQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支付结果通知</td>
+<td><a href="">ZCY_ONLINE_PAY_RESULT_NOTIFY_${zcy.env.label}</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_10">保证金</h2>
+<h3 id="_11">投标保证金</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>预创建保证金项目</td>
+<td><a href="">preCreateProject</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询保证金项目银行账号信息</td>
+<td><a href="">queryProjectBankAccount</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>同步保证金项目信息</td>
+<td><a href="">syncProjectInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询缴款信息</td>
+<td><a href="">inquiryPayInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>同步中标信息</td>
+<td><a href="">syncHitBidInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>同步单笔合同信息</td>
+<td><a href="">syncSingleContract</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>同步项目失败(流标)</td>
+<td><a href="">syncProjectFail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询项目退款信息</td>
+<td><a href="">queryProjectRefund</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询供应商缴款详情列表</td>
+<td><a href="">querySupplierPayment</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取保证金是否开通</td>
+<td><a href="">validDepositStatus</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取机构保证金配置信息</td>
+<td><a href="">queryAgencyDepositConfig</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12">入驻保证金</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>协议签订,推送待缴款记录通知</td>
+<td>createPaymentRecord</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>在协议变更、终止、罚没后，协议中心给保证金中心推送协议待退款单</td>
+<td>refundPaymentRecord</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询类目保证金信息</td>
+<td>queryCategoryDeposit</td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>MQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>缴款完成</td>
+<td><a href="">ZCY_MERCHANT_DEPOSIT_PAYMENT_${zcy.env.label}</a></td>
+</tr>
+<tr>
+<td>退款完成</td>
+<td><a href="">ZCY_MERCHANT_DEPOSIT_REFUND_${zcy.env.label} </a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_13">商品库</h2>
+<h3 id="_14">类目相关</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_15">商品相关</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sku">SKU相关</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_16">仓库相关</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_17">库存相关</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_18">预警监控</h2>
+<hr />
+<h2 id="_19">诚信管理</h2>
+<hr />
+<h2 id="_20">订阅平台</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>业务接入SDK申请</td>
+<td><a href="">SDK申请</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建关注订阅器</td>
+<td><a href="">createAttentionSubscriber</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建订阅器</td>
+<td><a href="">createSubscriber</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>编辑订阅器</td>
+<td><a href="">updateSubscriber</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除订阅器</td>
+<td><a href="">removeSubscriber</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取订阅器详情</td>
+<td><a href="">getSubscriberId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>(企业购)获取订阅器列表</td>
+<td><a href="">querySubscriberByOperatorId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>(企业购)获取订阅数据列表</td>
+<td><a href="">searchEnterpriseSubscriberData</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取订阅相关配置项</td>
+<td><a href="">getConfigData</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_21">【基础服务】</h1>
+<h2 id="_22">用户信息</h2>
+<h3 id="_23">用户信息服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取用户详情</td>
+<td><a href="">getUserById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取用户详情</td>
+<td><a href="">getUserByLoginAccount</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询用户</td>
+<td><a href="">findUserByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询用户</td>
+<td><a href="">pagingUserByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取用户身份</td>
+<td><a href="">getOperatorById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询用户身份</td>
+<td><a href="">pagingOperatorByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>记录用户最后的登录身份</td>
+<td><a href="">setUserLastOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取用户最近登录身份</td>
+<td><a href="">getLastOperatorByUserId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取账号的所有身份</td>
+<td><a href="">findAllOperatorByUserId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询用户操作员身份</td>
+<td><a href="">findOperatorByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询用户类别信息</td>
+<td><a href="">findUserType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>新增操作人</td>
+<td><a href="">createOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新操作人信息</td>
+<td><a href="">updateOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量更新员工信息</td>
+<td><a href="">batchUpdateOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除操作人</td>
+<td><a href="">deleteOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建用户</td>
+<td><a href="">createUser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量导入用户</td>
+<td><a href="">batchCreateUser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新用户信息</td>
+<td><a href="">updateUser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除用户信息</td>
+<td><a href="">deleteUser</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_24">用户收货地址服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取用户收货地址</td>
+<td><a href="">findById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取用户收货地址</td>
+<td><a href="">findByUserId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取用户默认收货地址</td>
+<td><a href="">findDefaultByUserId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>新增用户收货地址</td>
+<td><a href="">insert</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新用户收货地址</td>
+<td><a href="">update</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除用户收货地址</td>
+<td><a href="">delete</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除用户收货地址</td>
+<td><a href="">delete</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>设置为默认收货地址</td>
+<td><a href="">setDefault</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_25">用户类别服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>条件查询用户类别</td>
+<td><a href="">findUserTypeByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取用户类别详情</td>
+<td><a href="">getById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按编码）获取用户类别</td>
+<td><a href="">getByCode</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取用户类别树</td>
+<td><a href="">getTree</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>新增用户类别</td>
+<td><a href="">createUserType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>修改用户类别</td>
+<td><a href="">updateUserType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除用户类别</td>
+<td><a href="">deleteById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按编码）删除用户类别</td>
+<td><a href="">deleteByCode</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_26">机构组织</h2>
+<h3 id="_27">机构收货地址相关</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取机构收货地址</td>
+<td><a href="">findById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取机构收货地址</td>
+<td><a href="">findByOrgId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>新增机构收货地址</td>
+<td><a href="">insert</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量新增机构收货地址</td>
+<td><a href="">insertList</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新机构收货地址</td>
+<td><a href="">update</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除机构收货地址</td>
+<td><a href="">deleteById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除机构收货地址</td>
+<td><a href="">deleteByOrgId</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_28">机构信息相关</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取机构基本信息</td>
+<td><a href="">getInstitutionById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询机构基本信息</td>
+<td><a href="">findInstitutionByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询机构基本信息</td>
+<td><a href="">pagingInstitutionByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询机构基本信息</td>
+<td><a href="">findExactInstitutionByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询机构基本信息</td>
+<td><a href="">pagingExactInstitutionByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取机构的所有用户类别</td>
+<td><a href="">getInstitutionUserTypes</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取部门信息</td>
+<td><a href="">getDepartmentById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询部门信息</td>
+<td><a href="">findDepartmentByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询部门信息</td>
+<td><a href="">pagingDepartmentByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询归口部门信息</td>
+<td><a href="">pagingAdminDepartmentByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询部门子节点</td>
+<td><a href="">findChildDepartments</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询职位详情</td>
+<td><a href="">getTitleById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询职位</td>
+<td><a href="">findTitleByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取组织联系人</td>
+<td><a href="">getContactByOrganizationId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询组织联系人</td>
+<td><a href="">getContactByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新机构基本信息</td>
+<td><a href="">updateInstitution</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除机构</td>
+<td><a href="">deleteInstitution</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>新增部门</td>
+<td><a href="">createDepartment</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量导入部门</td>
+<td><a href="">batchCreateDepartment</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新部门信息</td>
+<td><a href="">updateDepartment</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量更新部门状态</td>
+<td><a href="">updateDepartmentStatus</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除部门信息</td>
+<td><a href="">deleteDepartment</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建部门操作人</td>
+<td><a href="">createDepartmentOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除部门操作人</td>
+<td><a href="">deleteDepartmentOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建职位</td>
+<td><a href="">createTitle</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新职位</td>
+<td><a href="">updateTitle</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量删除职位</td>
+<td><a href="">createTitleOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建职位操作人</td>
+<td><a href="">deleteTitleOperator</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除职位操作人</td>
+<td><a href="">createOrganizationContact</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建组织联系人</td>
+<td><a href="">updateOrganizationContact</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新组织联系人</td>
+<td><a href="">updateOrganizationContact</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除组织联系人</td>
+<td><a href="">deleteOrganizationContactByOrgIdAndType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量删除组织联系人</td>
+<td><a href="">deleteOrganizationContact</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新机构类别</td>
+<td><a href="">updateInstitutionUserType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新机构类别（专用）</td>
+<td><a href="">updateInstitutionUserType</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_29">采购单位/采监/集采相关服务接口</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取采购机构</td>
+<td><a href="">getPurchaserById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取采购机构</td>
+<td><a href="">getPurchaserById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询采购机构</td>
+<td><a href="">findPurchaserByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询采购机构</td>
+<td><a href="">pagingPurchaserByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>统计采购机构数量</td>
+<td><a href="">getPurchaserCountByCondition</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询不同维度的下属机构</td>
+<td><a href="">findChildPurchaser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询采购机构预算线的下属机构</td>
+<td><a href="">findChildPurchaser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（类别&amp;租户维度）统计机构数量</td>
+<td><a href="">getPurchaserCountByUserType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量导入采购机构</td>
+<td><a href="">batchCreatePurchaser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建[采购/集采/采监]机构</td>
+<td><a href="">createPurchaser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新[采购/集采/采监]机构</td>
+<td><a href="">updatePurchaser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>设置采购机构为预算主管单位</td>
+<td><a href="">updatePurchaserAdmin</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>修改采购机构状态</td>
+<td><a href="">updatePurchaserStatus</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除[采购/集采/采监]机构</td>
+<td><a href="">deletePurchaser</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>移除机构的租户关系</td>
+<td><a href="">removePurchaserRelation</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_30">租户区划</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根据租户编码查询租户</td>
+<td><a href="">getDistByCode</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据租户ID查询租户</td>
+<td><a href="">getDistById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>通过租户编码列表批量查询区划</td>
+<td><a href="">getDistByCodes</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>通过租户id列表批量查询区划</td>
+<td><a href="">getDistByIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据条件查询租户接口1</td>
+<td><a href="">findDistByCond</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据条件查询租户接口2</td>
+<td><a href="">findDistByCond</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>带分页的根据条件查询租户接口</td>
+<td><a href="">findDistByCond4Page</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据条件查找父级租户</td>
+<td><a href="">findParentDistByKey</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据条件查找子租户</td>
+<td><a href="">findSubDistByKey</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>更新租户信息（该接口不支持更新租户编码）</td>
+<td><a href="">modifyDist</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量更新租户信息</td>
+<td><a href="">batchModifyDist</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据租户编码删除区划，逻辑删除</td>
+<td><a href="">deleteDist</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据租户ID删除租户</td>
+<td><a href="">deleteDistById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>新增租户</td>
+<td><a href="">addDist</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>租户通用树查询</td>
+<td><a href="">searchDistTree</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>一次性获取所有租户</td>
+<td><a href="">findAllDistricts</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>通过非本级租户编码获取同级本级租户信息</td>
+<td><a href="">getCorrespondingLevelByDistrictCode</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>一次性获取所测试租户代码</td>
+<td><a href="">findTestDistCodes</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据状态统计租户信息接口</td>
+<td><a href="">getDistStatistics</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>同步租户标志状态接口：1. 归口部门 2. 预算单位</td>
+<td><a href="">syncDistrictConfig</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_31">菜单权限</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_32">数据权限</h2>
+<ul>
+<li>暂无</li>
+</ul>
+<hr />
+<h2 id="_33">采购目录</h2>
+<ul>
+<li>待补充新采购目录API</li>
+</ul>
+<hr />
+<h1 id="_34">【交易角色】</h1>
+<h2 id="_35">供应商库</h2>
+<h3 id="-">供应商-基本信息</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>批量查询供应商基本信息</td>
+<td><a href="">getSupplierBaseInfoDetails</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商基本信息</td>
+<td><a href="">getSupplierBaseInfoByStatus</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商详细信息</td>
+<td><a href="">getSupplierBaseInfoDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商详细信息</td>
+<td><a href="">getSupplierBaseInfoBySellerId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商监管机构信息</td>
+<td><a href="">getAuditOrgDTOBySupplierId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商监管机构信息</td>
+<td><a href="">getAuditOrgDTO</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取所有服务定义</td>
+<td><a href="">getServiceDefinitions</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商审核状态</td>
+<td><a href="">getSupplierAuditStatus</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商数据来源</td>
+<td><a href="">selectSourceBySupplierId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取服务配置详细信息</td>
+<td><a href="">getServiceDefinitionDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商档案编号</td>
+<td><a href="">getSupplierProfileNo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取企业规模信息</td>
+<td><a href="">getIndustryScaleTips</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商变更明细</td>
+<td><a href="">getChangeBaseInfoDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取供应商变更后的基本信息</td>
+<td><a href="">getFinalBaseInfoDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询供应商基本信息</td>
+<td><a href="">PagingSupplierBaseInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取区划正式供应商列表</td>
+<td><a href="">getOfficialSupplierOfDistrict</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询符合招投标条件的供应商</td>
+<td><a href="">getSupplierByCertificate</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询供应商信息（含分支机构）</td>
+<td><a href="">PagingSupplierAndBranchBaseInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询正式供应商信息</td>
+<td><a href="">PagingOfficialSupplierBaseInfo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>判断是否国税供应商</td>
+<td><a href="">isTaxSupplier</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>判断是否核心供应商</td>
+<td><a href="">validCenterSupplierData</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>判断国税供应商名称是否重复</td>
+<td><a href="">isTaxNameDuplicate</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>判断是否可更改监管机构</td>
+<td><a href="">canChangeAuditOrg</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>判断资质是否符合招投标的条件</td>
+<td><a href="">isSupplierFit</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-_1">供应商-元数据服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取经济行业树视图</td>
+<td><a href="">getEconomicIndustryTreeView</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取联系人树视图</td>
+<td><a href="">getContactPersonTreeView</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取经济性质树视图</td>
+<td><a href="">getEconomicTreeView</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取列表元数据</td>
+<td><a href="">getListView</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取树类型元数据</td>
+<td><a href="">getTreeView</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-_2">供应商-基础资料数据服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>批量获取供应商联系人</td>
+<td><a href="">getSupplierContactPersonInfoBySupplierIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取供应商分支机构信息</td>
+<td><a href="">getSupplierBranchInfoBySupplierIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取供应商基本信息</td>
+<td><a href="">getSupplierBaseInfoBySupplierIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取供应商审核结果</td>
+<td><a href="">getSupplierAuditInfoBySupplierIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取供应商财务信息</td>
+<td><a href="">getSupplierFinanceInfoBySupplierIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取供应商资质信息</td>
+<td><a href="">getSupplierCertificateInfoBySupplierIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取供应商出资人信息</td>
+<td><a href="">getSupplierInvestorInfoBySupplierIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取所有子区划的供应商信息</td>
+<td><a href="">getSupplierInfoByStatus</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取所有子区划的供应商数量</td>
+<td><a href="">getSupplierCountByAuditStatus</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-_3">供应商-资质读取服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取国税税务登记证详情</td>
+<td><a href="">getCertificateStateTaxDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取国税税务登记变更后详情</td>
+<td><a href="">getFinalCertificateStateTaxDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取国税税务登记变更明细</td>
+<td><a href="">getChangeCertificateStateTaxDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取社保详细信息</td>
+<td><a href="">getCertificateSocialInsuranceDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取社保详细信息变更明细</td>
+<td><a href="">getChangeCertificateSocialInsuranceDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取社保变更后详情</td>
+<td><a href="">getFinalCertificateSocialInsuranceDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取基本资质证书列表</td>
+<td><a href="">getBasicCertificateDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询基本资质证书变更后详情</td>
+<td><a href="">pagingFinalBasicCertificate</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询基本资质证书变更明细</td>
+<td><a href="">pagingFinalBasicCertificateOfOnlyChange</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取组织机构变更明细</td>
+<td><a href="">getChangeCertificateOrgDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取组织机构变更后详情</td>
+<td><a href="">getFinalCertificateOrgDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取营业执照号/社会信用代码</td>
+<td><a href="">getCertificateOrgDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取营业执照号/社会信用代码</td>
+<td><a href="">getCertificateRegistrationNo</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取营业执照号/社会信用代码</td>
+<td><a href="">getCertificateBizDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取营业执照号/社会信用代码变更后详情</td>
+<td><a href="">getFinalCertificateBizDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取营业执照号/社会信用代码变更后详情</td>
+<td><a href="">getChangeCertificateBizDetail</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-_4">供应商-联系人</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取联系人详情</td>
+<td><a href="">getContactPersonDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取联系人详情</td>
+<td><a href="">getAuthContactPersonDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取法人信息</td>
+<td><a href="">getLegalPerson</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询联系人</td>
+<td><a href="">pagingContactPerson</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询联系人（含供应商机构管理员）</td>
+<td><a href="">pagingContactPerson</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取变更联系人详情</td>
+<td><a href="">getChangeContactPersonDetail</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_36">代理机构库</h2>
+<h3 id="-_5">代理机构-基本信息</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取代理机构概要</td>
+<td><a href="">getOrganicByOrgId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询代理机构</td>
+<td><a href="">getOrganics</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取代理机构ID</td>
+<td><a href="">getAgeOrgInfoIdByOrgIds</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取代理机构详情</td>
+<td><a href="">getAgeOrgCommonDoByOutOrgId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取代理机构资质信息</td>
+<td><a href="">getQualificationDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询代理机构资质信息</td>
+<td><a href="">getQualifications</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取代理机构工作人员类型</td>
+<td><a href="">getEmployeeCategor</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询工作人员列表</td>
+<td><a href="">getEmployees</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取开评标场地信息</td>
+<td><a href="">getBiddingDetail</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页获取开评标场地信息</td>
+<td><a href="">getBiddings</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询代理业绩</td>
+<td><a href="">getPerformances</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-_6">代理机构-业绩信息</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分页查询代理机构业绩信息</td>
+<td><a href="">getPerformances</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>列表查询代理机构业绩信息</td>
+<td><a href="">getPerformances</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取代理机构业绩信息</td>
+<td><a href="">getPerformance</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>保存代理机构业绩信息（插入或更新）</td>
+<td><a href="">savePerformance</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>统计代理机构业绩信息数量</td>
+<td><a href="">getPerformanceCount</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-_7">代理机构-专职人员</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取代理机构专职人员详情</td>
+<td><a href="">getProfessionalByUserId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>批量获取代理机构专职人员数量</td>
+<td><a href="">getProCountByIds</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_37">专家库</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>导入项目</td>
+<td><a href="">importProject</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取项目专家抽取结果</td>
+<td><a href="">takeCheckExperts</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取公司类型</td>
+<td><a href="">queryCompanyType</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取项目抽取类型</td>
+<td><a href="">queryExtractTypeByProgramId</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取专家级别</td>
+<td><a href="">queryExpertLevel</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取专家专业信息</td>
+<td><a href="">queryBidAreas</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取专家库职称列表</td>
+<td><a href="">queryJobTitle</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>按状态统计项目</td>
+<td><a href="">takeNeedDealCount</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_38">资质库</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取组织机构代码/社会统一代码</td>
+<td><a href="">takeAgencyCode</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>按名称查询资质</td>
+<td><a href="">takeUnDraftTrees</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取资质等级信息</td>
+<td><a href="">findCertificateLevelsById</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>获取资质详情</td>
+<td><a href="">findBy</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_39">【数据服务】</h1>
+<hr />
+<h2 id="_40">元数据中心</h2>
+<h3 id="_41">对象集</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取代码集列表</td>
+<td>getObjList</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_42">代码集</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_43">自然语言处理</h2>
+<h3 id="_44">热词服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_45">内容安全服务</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_46">归档备案中心</h2>
+<ul>
+<li>建设中...</li>
+</ul>
+<hr />
+<h1 id="_47">【组件服务】</h1>
+<h2 id="_48">工作流</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>启动流程</td>
+<td><a href="">startProcess</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询流程所有任务节点</td>
+<td><a href="">findAllTaskModelDtos</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询流程所有活跃任务节点</td>
+<td><a href="">findAllActiveTaskModelDtos</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询当前任务节点候选用户</td>
+<td><a href=""> findCandidateUsers</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询当前任务节点候选（部门）用户</td>
+<td><a href=""> findCandidateUsers</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询下一任务节点候选用户</td>
+<td><a href="">findNextCandidateUsers</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询当前任务节点</td>
+<td><a href="">findCurrentTaskModels</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询下一任务节点</td>
+<td><a href="">findNextTaskModels</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>查询下一个特殊部门的接口</td>
+<td><a href="">getNextSpecifiedDepartment</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>结束任务节点</td>
+<td><a href="">executeProcess</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>结束流程</td>
+<td><a href="">stopProcess</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（未启动流程）获取首个任务节点</td>
+<td><a href="">getProcessModelFirstTaskModelDto</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（未启动流程）获取首个任务节点用户</td>
+<td><a href="">getProcessModelFirstUserList</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>流转日志-记录待审核日志</td>
+<td><a href=""> creatWaitTaskLoop</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>流转日志-记录已审核日志</td>
+<td><a href=""> updateWaitTaskLoop</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>流转日志-记录审核退回日志</td>
+<td><a href=""> updatBackWaitTaskLoop</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_49">模板中心</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>条件查询模板概要</td>
+<td><a href="">listTemplateBy</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询模板详情</td>
+<td><a href="">getTemplateBy</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件查询书签</td>
+<td><a href="">getBookmarkBy</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>模板书签内容赋值</td>
+<td><a href="">replaceBookmark</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_50">公告</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建无需审核公告接口</td>
+<td><a href="">autoCreateAnnouncement</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>创建业务自己审核的公告接口</td>
+<td><a href="">createAnnouncementWithoutFlow</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>业务审核后发布公告接口</td>
+<td><a href="">checkpassAnnouncementWithoutFlow</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_51">待办/消息</h2>
+<h3 id="_52">待办</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>发送待办</td>
+<td><a href="">publishBacklog</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>完成待办</td>
+<td><a href="">finishBacklog</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除待办</td>
+<td><a href="">removeBacklog</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按序列号&amp;用户）批量完成待办</td>
+<td><a href="">finishOneUserBacklogByAppSerial</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按序列号）批量完成待办</td>
+<td><a href="">finishBacklogByAppSerial</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按序列号&amp;用户）批量删除待办</td>
+<td><a href="">removeOneUserBacklogByAppSerial</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按序列号）批量删除待办</td>
+<td><a href="">removeBacklogByAppSerial</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按用户）批量删除待办</td>
+<td><a href="">removeOneUserBacklog</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>（按应用）统计待办</td>
+<td><a href="">queryBacklogByApplication</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询待办</td>
+<td><a href="">queryBacklog</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件获取待办数量</td>
+<td><a href="">countBacklog</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>条件批量统计应用待办数量</td>
+<td><a href="">staticsBacklogCountByStatus</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_53">站内消息</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>API</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>发送站内消息</td>
+<td><a href="">createMessage</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>删除站内消息</td>
+<td><a href="">deleteMessage</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>分页查询站内消息列表</td>
+<td><a href="">queryBacklogMessage</a></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>根据 app来获取各个状态的消息数量</td>
+<td><a href="">countMessageByApp</a></td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<hr /></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>政采云-共享业务 版权所有</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2018-10-11 14:08:29
+-->

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="黄老师">
+        
+        <link rel="shortcut icon" href="../../img/favicon_rocket.ico">
+        
+        <title>API Doc Sample - 政采云-共享业务</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/Atom One Light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82463489-2', 'mkdocs.org');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">政采云-共享业务</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">首页</a>
+                            </li>
+                            <li >
+                                <a href="../../map/">能力地图</a>
+                            </li>
+                            <li >
+                                <a href="../../solution/">解决方案</a>
+                            </li>
+                            <li >
+                                <a href="../">API文档</a>
+                            </li>
+                            <li >
+                                <a href="../../about/">帮助支持</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#api-doc-sample">API Doc Sample</a></li>
+            <li><a href="#dubbo">Dubbo接口名称</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="api-doc-sample">API Doc Sample</h1>
+<h2 id="dubbo">Dubbo接口名称</h2>
+<h4 id="_1">功能介绍</h4>
+<blockquote>
+<p>对接口提供的功能进行介绍</p>
+</blockquote>
+<p>接入方可根据参数中的检索策略获取不同条件下的模板信息，其中特性值为最主要的查询范围的收敛条件；特性值之间为且(AND)的关系，即：同时满足列举的特性值集合中的条件；当查询结果为多条数据，需要业务方自身过滤或增加特性值继续收敛到一条为止。</p>
+<h4 id="_2">(可选)名词解释</h4>
+<blockquote>
+<p>按需对专业名词进行解释</p>
+</blockquote>
+<h4 id="maven">Maven 依赖</h4>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;cn.gov.zcy.paas.template&lt;/groupId&gt;
+    &lt;artifactId&gt;gpcatalog-api&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0-RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<ul>
+<li>注：如果有二方包、三方包依赖，请一一列出</li>
+</ul>
+<h4 id="dubbo_1">Dubbo接口声明</h4>
+<pre><code class="java">package cn.gov.zcy.paas.template.api.service;
+
+public interface TemplateReadService {
+
+    Response&lt;List&lt;SearchTemplate&gt;&gt; listTemplateBy(@Valid @NotNull(message = ErrorMsg.SEARCH_PARAM_CANNOT_NULL) SearchParam searchParam);
+
+}
+
+</code></pre>
+
+<h4 id="_3">请求参数</h4>
+<h5 id="_4">请求参数示例</h5>
+<pre><code class="json">{
+  &quot;searchParam&quot;: {
+    &quot;searchType&quot;: &quot;BYRULEVERSION&quot;,
+    &quot;rules&quot;: [
+      {
+        &quot;code&quot;: &quot;NO110&quot;,
+        &quot;value&quot;: &quot;更新公告&quot;,
+        &quot;generalized&quot;: false
+      }
+    ],
+    &quot;templateType&quot;: &quot;PURCHASE_FILE&quot;,
+    &quot;userCategory&quot;: &quot;01&quot;,
+    &quot;distCode&quot;: &quot;339900&quot;,
+    &quot;orgId&quot;: 1000087601,
+    &quot;majorVersion&quot;: 1,
+    &quot;minorVersion&quot;: 5,
+    &quot;queryRule&quot;: false,
+    &quot;queryPageOfficeCode&quot;: false
+  }
+}
+</code></pre>
+
+<h5 id="_5">请求参数说明</h5>
+<table>
+<thead>
+<tr>
+<th>入参名称</th>
+<th>类型</th>
+<th>是否必填</th>
+<th>值域范围</th>
+<th>描述/示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>searchType</td>
+<td>SearchTypeEnum</td>
+<td>Y</td>
+<td>BY_RULE_IGNORE_DEFAULT(0, "忽略规则特性搜索-默认模板文件")<br>BY_RULE_DEFAULT(1, "按规则特性搜索-默认模板文件")<br>BY_RULE_VERSION(2, "按规则特性搜索-指定版本号文件")<br>BY_RULE_LATEST(3, "按规则特性搜索-最新版本文件")<br></td>
+<td>默认BY_RULE_IGNORE_DEFAULT</td>
+</tr>
+<tr>
+<td>rules</td>
+<td>List</td>
+<td>N</td>
+<td>N/A</td>
+<td>特性值集合，特性编码非必填，特性值必填</td>
+</tr>
+<tr>
+<td>rules.code</td>
+<td>String</td>
+<td>N</td>
+<td>字符串(1-50)</td>
+<td>特性编码</td>
+</tr>
+<tr>
+<td>rules.value</td>
+<td>String</td>
+<td>Y</td>
+<td>字符串(1-50)</td>
+<td>特性值</td>
+</tr>
+<tr>
+<td>rules.generalized</td>
+<td>Boolean</td>
+<td>N</td>
+<td>true, false</td>
+<td>是否开启向后通配，即支持通配符匹配，针对树状结构；<br> 默认关闭；<br>eg: 339900 开启后 * 即可匹配到；否则精确匹配，只能匹配到339900；</td>
+</tr>
+<tr>
+<td>templateType</td>
+<td>TemplateTypeEnum</td>
+<td>Y</td>
+<td>详见TemplateTypeEnum枚举，持续增长</td>
+<td></td>
+</tr>
+<tr>
+<td>userCategory</td>
+<td>String</td>
+<td>Y</td>
+<td>用户类别，参考： cn.gov.zcy.paas.user.enums.UserTypeEnum</td>
+<td>适用场景： cn.gov.zcy.paas.template.api.enums.SearchTypeEnum.BY_RULE</td>
+</tr>
+<tr>
+<td>distCode</td>
+<td>String</td>
+<td>N</td>
+<td>继承区划管理编码规则</td>
+<td>模板中心不校验区划是否合法（禁用、删除、任意值等非法值），校验工作由业务方自行保证</td>
+</tr>
+<tr>
+<td>orgId</td>
+<td>Long</td>
+<td>N</td>
+<td>继承机构业务的编码规则</td>
+<td>模板中心不校验机构是否合法（禁用、删除、任意值等非法值），校验工作由业务方自行保证</td>
+</tr>
+<tr>
+<td>majorVersion</td>
+<td>Integer</td>
+<td>N</td>
+<td>从0开始</td>
+<td>结合searchType参数使用，不传时默认为0</td>
+</tr>
+<tr>
+<td>minorVersion</td>
+<td>Integer</td>
+<td>N</td>
+<td>从0开始</td>
+<td>结合searchType参数使用，不传时默认为0</td>
+</tr>
+<tr>
+<td>queryRule</td>
+<td>Boolean</td>
+<td>N</td>
+<td>true, false</td>
+<td>是否查询模板关联的特性</td>
+</tr>
+<tr>
+<td>queryPageOfficeCode</td>
+<td>Boolean</td>
+<td>N</td>
+<td>true, false</td>
+<td>是否查询转换后适应pageOffice的书签编码</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">返回结果</h4>
+<h5 id="_7">返回结果示例</h5>
+<pre><code class="json">{
+  &quot;result&quot;: [
+    {
+      &quot;id&quot;: &quot;id&quot;,
+      &quot;categoryId&quot;: &quot;categoryId&quot;,
+      &quot;name&quot;: &quot;name&quot;,
+      &quot;code&quot;: &quot;code&quot;,
+      &quot;sub&quot;: &quot;sub&quot;,
+      &quot;isNormal&quot;: &quot;isNormal&quot;,
+      &quot;type&quot;: &quot;type&quot;,
+      &quot;specification&quot;: &quot;specification&quot;,
+      &quot;orgId&quot;: &quot;orgId&quot;,
+      &quot;distCode&quot;: &quot;distCode&quot;,
+      &quot;sourceEntityId&quot;: &quot;sourceEntityId&quot;,
+      &quot;status&quot;: &quot;status&quot;,
+      &quot;creator&quot;: &quot;creator&quot;,
+      &quot;createTime&quot;: &quot;createTime&quot;,
+      &quot;updator&quot;: &quot;updator&quot;,
+      &quot;updateTime&quot;: &quot;updateTime&quot;,
+      &quot;extraJson&quot;: &quot;extraJson&quot;,
+      &quot;fileExt&quot;: &quot;fileExt&quot;,
+      &quot;fileId&quot;: &quot;fileId&quot;,
+      &quot;fileName&quot;: &quot;fileName&quot;,
+      &quot;fileCode&quot;: &quot;fileCode&quot;,
+      &quot;fileOSSId&quot;: &quot;fileOSSId&quot;,
+      &quot;majorVersion&quot;: &quot;majorVersion&quot;,
+      &quot;minorVersion&quot;: &quot;minorVersion&quot;,
+      &quot;bizCode&quot;: &quot;bizCode&quot;,
+      &quot;bucketKey&quot;: &quot;bucketKey&quot;,
+      &quot;rules&quot;: [
+        {
+          &quot;code&quot;: &quot;code&quot;,
+          &quot;name&quot;: &quot;name&quot;,
+          &quot;value&quot;: &quot;value&quot;,
+          &quot;origin&quot;: &quot;origin&quot;
+        }
+      ]
+    }
+  ],
+  &quot;success&quot;: true,
+  &quot;error&quot;: &quot;&quot;
+}
+</code></pre>
+
+<h5 id="_8">返回结果说明</h5>
+<table>
+<thead>
+<tr>
+<th>返回参数名称</th>
+<th>类型</th>
+<th>值域范围</th>
+<th>描述/示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Long</td>
+<td>N/A</td>
+<td>模板id</td>
+</tr>
+<tr>
+<td>categoryId</td>
+<td>Long</td>
+<td>N/A</td>
+<td>模板分类id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>字符串(1-50)</td>
+<td>模板名称</td>
+</tr>
+<tr>
+<td>code</td>
+<td>String</td>
+<td>字符串(1-50)</td>
+<td>模板编码</td>
+</tr>
+<tr>
+<td>sub</td>
+<td>Boolean</td>
+<td>true, false</td>
+<td>是否允许关联子模板</td>
+</tr>
+<tr>
+<td>isNormal</td>
+<td>Integer</td>
+<td>N/A</td>
+<td>是否是正常状态</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Integer</td>
+<td>N/A</td>
+<td>模板类型</td>
+</tr>
+<tr>
+<td>specification</td>
+<td>String</td>
+<td>字符串(0-500)</td>
+<td>模板说明。没有值时返回空字符串。</td>
+</tr>
+<tr>
+<td>orgId</td>
+<td>Long</td>
+<td>N/A</td>
+<td>机构id</td>
+</tr>
+<tr>
+<td>distCode</td>
+<td>String</td>
+<td>参考区划管理编码规则</td>
+<td>区划编码</td>
+</tr>
+<tr>
+<td>sourceEntityId</td>
+<td>Long</td>
+<td>否</td>
+<td>原模板id，只有从其他区划复制过来的模板才有</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>N/A</td>
+<td>状态：草稿、已发布</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>Long</td>
+<td>N/A</td>
+<td>创建者</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>Date</td>
+<td>N/A</td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updator</td>
+<td>Long</td>
+<td>N/A</td>
+<td>更新者</td>
+</tr>
+<tr>
+<td>updateTime</td>
+<td>Date</td>
+<td>N/A</td>
+<td>更新时间</td>
+</tr>
+<tr>
+<td>extraJson</td>
+<td>String</td>
+<td>字符串(0-255)</td>
+<td>额外字段，供业务方存储冗余信息。没有值时返回空字符串。</td>
+</tr>
+<tr>
+<td>fileExt</td>
+<td>String</td>
+<td>字符串(1-50)<br>当前取值："docx"、"html"</td>
+<td>模板文件的类型</td>
+</tr>
+<tr>
+<td>fileId</td>
+<td>Long</td>
+<td>N/A</td>
+<td>模板文件表id</td>
+</tr>
+<tr>
+<td>fileName</td>
+<td>String</td>
+<td>字符串(1-50)</td>
+<td>文件名称</td>
+</tr>
+<tr>
+<td>fileCode</td>
+<td>String</td>
+<td>字符串(1-50)</td>
+<td>文件编码</td>
+</tr>
+<tr>
+<td>fileOSSId</td>
+<td>String</td>
+<td>字符串(1-500)</td>
+<td>文件在阿里云OSS上的路径</td>
+</tr>
+<tr>
+<td>majorVersion</td>
+<td>Integer</td>
+<td>N/A</td>
+<td>主模板id</td>
+</tr>
+<tr>
+<td>minorVersion</td>
+<td>Integer</td>
+<td>N/A</td>
+<td>次模板id</td>
+</tr>
+<tr>
+<td>bizCode</td>
+<td>Integer</td>
+<td>N/A</td>
+<td>业务编码</td>
+</tr>
+<tr>
+<td>bucketKey</td>
+<td>String</td>
+<td>字符串(1-50)<br>参考架构组OSS Bucket编码</td>
+<td>阿里云Bucket</td>
+</tr>
+<tr>
+<td>rules</td>
+<td>List</td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td>rules.code</td>
+<td>String</td>
+<td>字符串(1-50)</td>
+<td>特性编码</td>
+</tr>
+<tr>
+<td>rules.value</td>
+<td>String</td>
+<td>字符串(1-50)</td>
+<td>特性值</td>
+</tr>
+<tr>
+<td>rules.generalized</td>
+<td>Boolean</td>
+<td>true, false</td>
+<td>是否开启向后通配，即支持通配符匹配，针对树状结构；<br> 默认关闭；<br>eg: 339900 开启后 * 即可匹配到；否则精确匹配，只能匹配到339900；</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_9">错误与异常</h4>
+<blockquote>
+<p>只展现业务特殊异常，系统级异常参见：<a href="">系统级异常规范</a></p>
+</blockquote>
+<h4 id="_10">性能说明</h4>
+<h4 id="_11">代码示例</h4>
+<blockquote>
+<p>建议把此API的各种玩法示例都写全，防止业务方不会用、用错。</p>
+</blockquote>
+<pre><code class="java">/**
+ * 根据特性查询模板的dubbo接口
+ */
+@Test
+public void searchTemplateByRuleTest() {
+
+    SearchParam.RuleSearchParam ruleSearchParam = new SearchParam.RuleSearchParam();
+    ruleSearchParam.setValue(&quot;部门集中采购-委托本级部门&quot;);
+    ruleSearchParam = new SearchParam.RuleSearchParam();
+    ruleSearchParam.setValue(&quot;A0101&quot;);
+    ruleSearchParam.setGeneralized(true);
+
+    List&lt;SearchParam.RuleSearchParam&gt; rules = new ArrayList&lt;&gt;();
+    rules.add(ruleSearchParam);
+
+    SearchParam searchParam = new SearchParam();
+    searchParam.setRules(rules);
+    searchParam.setDistCode(&quot;339900&quot;);
+    searchParam.setOrgId(-1L);
+    searchParam.setUserCategory(&quot;88&quot;);
+    searchParam.setTemplateType(TemplateTypeEnum.CONTRACT);
+    searchParam.setSearchType(SearchTypeEnum.BY_RULE_IGNORE_DEFAULT);
+
+    Response&lt;List&lt;SearchTemplate&gt;&gt; resp = templateReadService.listTemplateBy(searchParam);
+
+    System.out.println(resp);
+}
+</code></pre>
+
+<h4 id="_12">相关链接</h4>
+<ul>
+<li>同一流程上下游的其他API</li>
+<li>API用到的相关入参，且此入参是通过其他API获得的</li>
+</ul>
+<h3 id="_13">废弃的选项</h3>
+<ul>
+<li>前置要求： 以参数方式驱动，在相关链接里链接到对应的API</li>
+<li>API 授权类型： Dubbo 不需要</li>
+<li>系统级入参：不涉及</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>政采云-共享业务 版权所有</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
